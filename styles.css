@@ -1,0 +1,277 @@
+:root{
+  --primary-green: #38C34D;
+  --secondary-geen: #00B77C;
+  --gradient-green: linear-gradient(226.25deg, #00B77C 17.23%, #38C34D 100%);
+  --soft-white: #9BB1AA;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  height: 100vh;
+  background: linear-gradient(172deg, #152C3A 0%, #2F4858 100%);
+}
+
+.top-circle {
+  width: 10vw;
+  max-width: 160px;
+  height: auto;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.sub-title {
+  grid-column: 2 / span 3;
+  grid-row: 3;
+}
+
+.sub-title p:first-child {
+  color: white;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.sub-title p:last-child {
+  color: #9BB1AA;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.back {
+  grid-column: 2 / 12;
+  grid-row: 4 / 8;
+  background-color: var(--secondary-geen);
+  opacity: 0.2;
+  height: 48vh;
+  align-self: center;
+  z-index: 0;
+}
+
+.title {
+  grid-row: 5 / 6;
+  grid-column: 3 / 6;
+  z-index: 1;
+}
+
+.title p:first-child {
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 75px;
+  color: white;
+}
+
+.title p:last-child {
+  font-weight: 500;
+  font-size: 3em;
+  line-height: 56px;
+  color: var(--primary-green);
+}
+
+.icon-drop {
+  grid-row: 6 / 7;
+  grid-column: 3 / 6;
+  z-index: 1;
+  align-self: center;
+}
+
+.second-snake {
+  display: grid;
+  grid-row: 2 / 6;
+  grid-column: 6 / 9;
+  max-width: 350px;
+  background: var(--gradient-green);
+}
+
+.second-snake img {
+  align-self: center;
+  justify-self: center;
+}
+
+.principal-snake {
+  grid-column: 8 / 11;
+  grid-row: 3 / -1;
+  max-width: 350px;
+  z-index: 3;
+  display: grid;
+}
+
+.principal-snake img {
+  height: 475px;
+  width: 221px;
+  align-self: center;
+  justify-self: center;
+}
+
+.principal-snake-back {
+  grid-column: 8 / 11;
+  grid-row: 4 / 8;
+  background-color: white;
+  background-image: url('./images/snake-skin.png');
+  z-index: 2;
+}
+
+.date {
+  grid-row: -2;
+  grid-column: 1;
+  align-self: center;
+  margin-left: 16px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.number {
+  grid-row: -2;
+  grid-column: -2;
+  align-self: center;
+  justify-self: end;
+  margin-right: 16px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--secondary-geen);
+}
+
+@media only screen and (max-width:1100px){
+  .sub-title p:first-child {
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+  
+  .sub-title p:last-child {
+    font-size: 1em;
+    line-height: 1.2;
+  }
+
+  .title p:first-child {
+    font-size: 2.5em;
+    line-height: 47px;
+  }
+  
+  .title p:last-child {
+    font-size: 1.5em;
+    line-height: 28px;
+  }
+
+  .icon-drop {
+    width: 45px;
+  }
+
+  .second-snake img {
+    width: 150px;
+  }
+  
+  .principal-snake img {
+    height: 291px;
+    width: 135px;
+  }
+
+  .date {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media only screen and (max-width:700px){
+  body{
+    min-width: 320px;
+  }
+
+  .sub-title {
+    grid-column: -6 / -2;
+    grid-row: 1;
+    align-self: center;
+    text-align: end;
+  }
+  
+  .sub-title p:first-child {
+    font-size: 18px;
+    line-height: 19px;
+  }
+  
+  .sub-title p:last-child {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  
+  .back {
+    grid-column: 1 / 14;
+    grid-row: 4 / 7;
+    height: 40vh;
+  }
+
+  .title {
+    grid-row: 2 / 3;
+    grid-column: 2 / 8;
+  }
+  
+  .title p:first-child {
+    font-size: 40px;
+    line-height: 47px;
+  }
+  
+  .title p:last-child {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  
+  .icon-drop {
+    grid-row: 2 / 3;
+    grid-column: 10 / span 2;
+    width: 45px;
+    justify-self: end;
+  }
+
+  .second-snake {
+    grid-row: 3 / 7;
+    grid-column: 2 / 8;
+    height: 42vh;
+    align-self: center;
+  }
+  
+  .second-snake img {
+    max-width: 150px;
+  }
+  
+  .principal-snake {
+    grid-column: 6 / 12;
+    grid-row: 4 / 8;
+  }
+  
+  .principal-snake img {
+    height: 291px;
+    width: 135px;
+  }
+
+  .principal-snake-back {
+    grid-column: 6 / 12;
+    grid-row: 4 / 8;
+    height: 42vh;
+    align-self: center;
+  }
+
+  .date {
+    grid-column: 2 / span 5;
+    grid-row: 8;
+    margin:0;
+    font-size: 18px;
+  }
+
+  .number{
+    grid-column: -4 / span 2;
+    grid-row: 8;
+    margin:0;
+    font-size: 32px;
+  }
+}
+
