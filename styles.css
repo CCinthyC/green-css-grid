@@ -88,7 +88,6 @@ main {
   display: grid;
   grid-row: 2 / 6;
   grid-column: 6 / 9;
-  max-width: 350px;
   background: var(--gradient-green);
 }
 
@@ -100,7 +99,6 @@ main {
 .principal-snake {
   grid-column: 8 / 11;
   grid-row: 3 / -1;
-  max-width: 350px;
   z-index: 3;
   display: grid;
 }
